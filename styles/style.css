@@ -1,0 +1,131 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    list-style-type: none;
+    list-style: none;
+
+    font-family: sans-serif;
+
+    object-fit: cover;
+
+    /* overflow-x: hidden; */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER */
+
+header {
+    background-color: #0091ff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    position: relative;
+    top: 2em;
+    left: 1em;
+
+    section {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content min-content 1fr;
+        grid-template-areas: 
+        "radio ."
+        ". tijd"
+        "week programma"
+        ;
+
+        h2 {
+            grid-area: radio;
+            
+            img {
+                width: 5em;
+                border-radius: 10px;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        .week {
+            border: 2px solid #0091ff;
+            grid-area: week;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-height: 11.5em;
+            width: 7.5em;
+
+            /* li snap naar het midden */
+            scroll-snap-type: y mandatory;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                background-color: aqua;
+                margin-top: 1em;
+                margin-right: 2em;
+                padding: 1em;
+                height: 50px;
+                min-width: 8em;
+                text-align: center;
+                /* li snap naar het midden */
+                scroll-snap-align: center;
+            }
+
+            li:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .tijd {
+            display: none;
+            /* desktop */
+            /* grid-area: tijd;
+            display: flex;
+            padding-left: 0; */
+        }
+
+        .tijd > li::after {
+            color: gray;
+            content: "- - - - -";
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+
+            white-space: nowrap;
+            z-index: 1;
+        }
+
+        .tijd > li:last-child::after {
+            content: '';
+        }
+
+        .article_container{
+            grid-area: programma;
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            /* white-space: nowrap; */
+
+            article {
+                /* items worden niet kleiner in de horizontal scrolling area */
+                flex-shrink: 0;
+                border-radius: 5px;
+                height: 11.5em;
+                max-width: 10em;
+                margin-left: 0.3em;
+                margin-right: 2em;
+                border: 1px solid black;
+            }
+        }
+    }
+}
