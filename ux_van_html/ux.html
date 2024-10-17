@@ -1,0 +1,251 @@
+<h1>UX in HTML</h1>
+
+<h2>Links</h2>
+
+<a target="_blank" href="ux.html">UX in HTML</a>
+
+<button>Knop</button>
+
+<a target="_blank" href="ux.html">UX in HTML</a>
+<a target="_blank" href="ux.html">UX in HTML</a>
+<a target="_blank" href="ux.html">UX in HTML</a>
+<a target="_blank" href="ux.html">UX in HTML</a>
+
+
+<h2>Afbeeldingen</h2>
+
+<a href="ux.html"><img alt="UX in HTML" width="200" height="100"></a>
+
+<a href="ux.html"><img alt="Icoon">UX in HTML</a>
+
+<a href="ux.html"><img alt="Download icoon">UX in HTML</a>
+
+<a href="ux.html"><img alt="">UX in HTML</a>
+
+
+<h2>Labels voor invoervelden</h2>
+
+<fieldset>
+    <legend>Docenten</legend>
+    <ul>
+      <li><input type="checkbox"> Charley</li>
+      <li><input type="checkbox"> Cyd</li>
+      <li><input type="checkbox"> Dion</li>
+      <li><input type="checkbox"> Dorien</li>
+      <li><input type="checkbox"> Joost</li>
+      <li><input type="checkbox"> Justus</li>
+      <li><input type="checkbox"> Koop</li>
+      <li><input type="checkbox"> Krijn</li>
+      <li><input type="checkbox"> Sanne</li>
+      <li><input type="checkbox"> Suus</li>
+    </ul>
+</fieldset>
+
+<fieldset>
+    <legend>Docenten</legend>
+    <ul>
+      <li><label><input type="checkbox"> Charley</label></li>
+      <li><label><input type="checkbox"> Cyd</label></li>
+      <li><label><input type="checkbox"> Dion</label></li>
+      <li><label><input type="checkbox"> Dorien</label></li>
+      <li><label><input type="checkbox"> Joost</label></li>
+      <li><label><input type="checkbox"> Justus</label></li>
+      <li><label><input type="checkbox"> Koop</label></li>
+      <li><label><input type="checkbox"> Krijn</label></li>
+      <li><label><input type="checkbox"> Sanne</label></li>
+      <li><label><input type="checkbox"> Suus</label></li>
+    </ul>
+</fieldset>
+
+
+<fieldset>
+    <legend>Adresgegevens</legend>
+    <p><input type="text"></p>
+    <p><input type="text"></p>
+    <p><input type="text"></p>
+    <p><input type="text"></p>
+</fieldset>
+
+<fieldset>
+    <legend>Adresgegevens</legend>
+    <p><label>naam<input type="text"></label></p>
+    <p><label>achternaam<input type="text"></label></p>
+    <p><label>straat naam<input type="text"></label></p>
+    <p><label>huisnummer<input type="text"></label></p>
+</fieldset>
+
+<fieldset>
+    <legend>Adresgegevens</legend>
+    <p>Straat: <input type="text"></p>
+    <p>Huisnummer: <input type="text"></p>
+    <p>Postcode: <input type="text"></p>
+    <p>Plaats: <input type="text"></p>
+</fieldset>
+
+<fieldset>
+    <legend>Adresgegevens</legend>
+    <p><label>Straat: <input type="text"></label></p>
+    <p><label>Huisnummer: <input type="text"></label></p>
+    <p><label>Postcode: <input type="text"></label></p>
+    <p><label>Plaats: <input type="text"></label></p>
+</fieldset>
+
+<style>
+    input:hover, input:focus {
+      outline: 2px solid blue;
+    }
+</style>
+
+
+<h2>Meer informatie en accordeons (progressive disclosure)</h2>
+
+<details>
+    <summary>Meer info</summary>
+    <p>Deze informatie krijg je pas later te zien.</p>
+    <p>Kan handig zijn.</p>
+</details>
+
+<details name="faq">
+    <summary>Moet ik al kunnen coderen?</summary>
+    <p>Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills te verbeteren en te verdiepen in de stof.</p>
+</details>
+<details name="faq">
+    <summary>Wat is frontend development?</summary>
+    <p>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.</p>
+</details>
+<details name="faq">
+    <summary>Hoe werkt deze frontend developer opleiding?</summary>
+    <p>Je richt je tijdens deze tweejarige studie op webdesign, visual interface design en frontend development. Vanaf het begin van de opleiding werk je aan actuele opdrachten van échte opdrachtgevers, en leer je samenwerken in multidisciplinaire teams.
+        <a href="">a zonder href</a>
+    </p>
+</details>
+
+<h2>Geavanceerd: Popups</h2>
+
+<button popovertarget="popup">Open iets</button>
+
+<dialog popover id="popup">
+  <p>Dit staat in een popup/overlay/popover.</p>
+  <p>Leuk he.</p>
+  <button popovertarget="popup" popovertargetaction="hide">Sluit dit ding weer</button>
+</dialog>
+
+
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Popup Form</h2>
+<p>Click on the button at the bottom of this page to open the login form.</p>
+<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+
+<h2>Headings</h2>
+

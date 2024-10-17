@@ -1,0 +1,65 @@
+https://github.com/fdnd-task/all-human-accessible-website/blob/main/docs/user-experience-van-html.md
+
+links
+
+shift + rechter klik maakt een niewe browser window open van de zelfde pagina.
+
+control + rechter klik maakt een niewe tab open in de browser waarin je bezig bent
+
+option + rechter klik doet 
+
+alt + rechter klik doet niks
+
+
+download in de anchor tag
+download de html file
+
+target blank
+maakt een nieuwe tab open in de browser waarin je bezig
+
+een button geeft geen extra functionaliteiten
+
+de tab begint op de eerste link
+en volg dan de volg orde van de linkjes en buttons
+
+
+
+
+afbeeldingen
+
+afbeelding met een alt ziet er beter uit als er geen img ingeladen wordt
+
+alt icoon is beter omdat het laat zien dat er een icoon daar moet staan
+
+download icoon is niet zo goed want er is geen download attribute aanwezig zit niks wordt gedownload als het geklikt wordt
+
+bij een lege alt zien we niks
+
+
+
+Labels voor invoervelden
+
+met labels kan je makkelijker op het input veld klikken, ook op de tekst ernaast
+zonder label moet je precies op het veld klikken
+
+als de input veld verplicht is een rode border erom heen
+
+
+
+Meer informatie en accordeons (progressive disclosure)
+
+de volgende detail maakt de vorige dicht. het werkt wel goed.
+als er een link erinstaat kan je ernaar toe met tab index
+
+
+Geavanceerd: Popups
+
+tab index gaat naar de top up als het open gaat
+maar het gaat niet weg als er geen close button is.
+
+
+Headings
+
+de heading structuur ziet er logisch uit totdat je onderin komt en een tweede h1 ziet
+deze mag er niet zijn, 1 h1 per html file.
+deze staat nu hier omdst ik de code gekopieert en gepaste heb zodat ik een pop up kon testen met tab index.
