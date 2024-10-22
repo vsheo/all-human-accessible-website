@@ -19,113 +19,401 @@ a {
 }
 
 /* HEADER */
-
 header {
-    background-color: #0091ff;
+    background-color: #008cff;
     color: white;
     padding: 10px;
     text-align: center;
+    /* background-image:
+    repeating-linear-gradient(
+        -45deg,
+        #0091ff 10%,
+        #fe0170 0 20%,
+        #63bbff 0 30%,
+        #0091ff 0 40%,
+        orange 0 50%
+    ); */
 }
 
 /* MAIN */
-
 main {
-    display: flex;
-    position: relative;
-    top: 2em;
-    left: 1em;
+    details:last-child {
+        margin-bottom: 5em;
+    }
 
-    section {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: min-content min-content 1fr;
-        grid-template-areas: 
-        "radio ."
-        ". tijd"
-        "week programma"
-        ;
-
-        h2 {
-            grid-area: radio;
-            
-            img {
-                width: 5em;
-                border-radius: 10px;
-                height: auto;
-                object-fit: cover;
-            }
-        }
-
-        .week {
-            border: 2px solid #0091ff;
-            grid-area: week;
-            overflow-x: hidden;
-            overflow-y: auto;
-            max-height: 11.5em;
-            width: 7.5em;
-
-            /* li snap naar het midden */
-            scroll-snap-type: y mandatory;
+    details {
+        summary {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 2em;
+            gap: 1em;
 
-            li {
-                background-color: aqua;
-                margin-top: 1em;
-                margin-right: 2em;
-                padding: 1em;
-                height: 50px;
-                min-width: 8em;
+            .radio_img{
+                width: 15em;
+                height: 15em;
+                box-shadow: #0091ff 4px 4px 4px 1px;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        section {
+            h2:nth-of-type(1) {
                 text-align: center;
-                /* li snap naar het midden */
-                scroll-snap-align: center;
+
+                @media screen and (min-width: 600px) {
+                    display: none;
+                }
             }
 
-            li:first-child {
-                margin-top: 0;
+            h2:nth-of-type(2) {
+                grid-area: radio;
+            
+                .radio_veronica {
+                    width: 7em;
+                    border: 1px solid #000000;
+                    border-radius: 10px;
+                    height: auto;
+                    object-fit: cover;
+                }
+
+                .radio_slam {
+                    width: 4em;
+                    border: 1px solid #000000;
+                    border-radius: 10px;
+                    height: auto;
+                    object-fit: cover;
+                    position: relative;
+                    left: 1.3em;
+                }
+
+                .radio_100 {
+                    width: 4em;
+                    border: 1px solid #000000;
+                    border-radius: 10px;
+                    height: auto;
+                    object-fit: cover;
+                    position: relative;
+                    left: 1.3em;
+                }
+
+                .radio_sublime {
+                    width: 4em;
+                    border: 1px solid #ffffff;
+                    border-radius: 10px;
+                    height: auto;
+                    object-fit: cover;
+                    position: relative;
+                    left: 1.3em;
+                }
+
+                @media screen and (max-width: 600px) {
+                    display: none;
+                }
+            }
+
+            .week {
+                background-color: #ffffff;
+                z-index: 1;
+
+                position: sticky;
+                top: 0;
+                padding: 1em;
+                margin: 0;
+        
+                display: flex;
+                align-items: center;
+                gap: 2em;
+
+                overflow-x: auto;
+                overflow-y: hidden;
+                
+                @media screen and (min-width: 600px) {
+                    border: 1px solid #0091ff;
+                    grid-area: week;
+                    position: relative;
+                    top: -1em;
+
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    max-height: 20em;
+                    width: 10em;
+
+                    /* li snap naar het midden */
+                    scroll-snap-type: y mandatory;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        background-color: aqua;
+                        margin-top: 1em;
+                        padding: 1em;
+                        height: 50px;
+                        border-radius: 20px;
+                        min-width: 8em;
+                        text-align: center;
+                        /* li snap naar het midden */
+                        scroll-snap-align: center;
+                    }
+
+                    li:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .today {
+                background-color: red;
+            }
+
+            .programma_container {
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+
+                .tijd {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    left: -1em;
+    
+                    li::after {
+                        display: block;
+                                        
+                        content: "- - - - -";
+                        transform: rotate(90deg);
+                        margin-top: 1.5em;
+                        margin-bottom: 1.5em;
+                        white-space: nowrap;
+                    }
+    
+                    li:last-child::after {
+                        content: '';
+                    }
+
+                    /* tijd */
+                    @media screen and (min-width: 600px) {
+                        background-color: white;
+                        flex-direction: row;
+                        position: relative;
+                        top: 2em;
+                        left: 1em;
+                        border-radius: 20px;
+
+                        li {
+                            height: 1.5em;
+                        }
+
+                        li::after {
+                            rotate: 90deg;
+                            transform-origin: top;
+                            margin: 0;
+                            padding-left: 0.5em;
+                            padding-right: 1em;
+                            margin-left: 2em;
+                            margin-right: 1em;
+                        }
+
+                        /* om de 2 li een gap */
+                        li:nth-child(2n)::after {
+                            content: '';
+                            margin-left: 6em;
+                        }
+                    }
+                }
+
+                .card_direction {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    top: 1em;
+                    gap: 1em;
+
+                    .now_playing {
+                        background-color: rgb(150, 150, 215);
+                    }
+
+                    article {
+                        /* border: 1px solid black; */
+                        border-radius: 5px;
+                        box-shadow: 0.05em 0.05em 0.3em  0.1em gray;
+                        width: 15em;
+                
+                        display: grid;
+                        /* grid-template-columns: min-content; */
+                        grid-template-areas:
+                        "img"
+                        "titel"
+                        "tekst"
+                        "info"
+                        ;
+                        gap: 0.5em;
+
+                        h3 {
+                            grid-area: titel;
+                            justify-self: center;
+                        }
+                
+                        .profile_picture {
+                            grid-area: img;
+                            border-radius: 50%;
+                            width: 4em;
+                            height: 4em;
+                            margin-top: 0.3em;
+                            justify-self: center;
+                        }
+                
+                        .tekst {
+                            grid-area: tekst;
+                            max-width: 11em;
+                            justify-self: center;
+
+                            @media screen and (min-width: 600px) {
+                                position: relative;
+                                bottom: 0.5em;
+                            }
+                        }
+
+                        .bottom {
+                            grid-area: info;
+                            justify-self: center;
+                            text-align: center;
+                            margin-bottom: 0.5em;
+
+                            background-color: #fe0170;
+                            height: 2.5em;
+                            width: 7em;
+                            border-radius: 5px;
+                
+                            @media screen and (min-width: 600px) {
+                                position: absolute;
+                                bottom: 0.5em;
+                            }
+                        }
+
+                        .bottom:hover {
+                            background-color: white;
+                            color: #fe0170;
+                        }
+
+                        /* article */
+                        @media screen and (min-width: 600px) {
+                            background-color: white;
+                           border-radius: 5px;
+                           height: 18em;
+                           min-width: 15em;
+                           max-width: 100%;
+                           border: 1px solid black;
+                           box-shadow: 3px 5px 6px 1px gray;
+                        }
+                    }
+                    /* card_direction */
+                    @media screen and (min-width: 600px) {
+                        display: flex;
+                        flex-direction: row;
+                        overflow: hidden;
+                    }
+                }
+                /* programma_container */
+                @media screen and (min-width: 600px) {
+                    display: grid;
+                    grid-area: programma_cont;
+                    flex-direction: column;
+                    position: relative;
+                    top: 2em;
+                    height: 25.5em;
+
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                }
+            }
+            /* section */
+            @media screen and (min-width: 600px) {
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                grid-template-rows: min-content 1fr;
+                grid-template-areas:
+                "radio programma_cont"
+                "week programma_cont";
+
+                padding-top: 2em;
+                margin-left: 2em;
+                gap: 2em;
             }
         }
-
-        .tijd {
-            display: none;
-            /* desktop */
-            /* grid-area: tijd;
-            display: flex;
-            padding-left: 0; */
+    }
+    /* main */
+    /* @media screen and (min-width: 600px) {
+        details:nth-child(1) {
+            background-image:
+            linear-gradient(
+                -35deg,
+                #63bbff 50%,
+                #0091ff 50%
+            );
         }
 
-        .tijd > li::after {
-            color: gray;
-            content: "- - - - -";
-            margin-left: 0.5em;
-            margin-right: 0.5em;
-
-            white-space: nowrap;
-            z-index: 1;
+        details:nth-child(2) {
+            background-image:
+            linear-gradient(
+                -35deg,
+                #0091ff 50%,
+                #fe0170 50%
+            );
         }
 
-        .tijd > li:last-child::after {
-            content: '';
+        details:nth-child(3) {
+            background-image:
+            radial-gradient(
+                #c99b51 50%,
+                #db6e08 50%
+            );
         }
 
-        .article_container{
-            grid-area: programma;
-            display: flex;
-            flex-direction: row;
-            overflow-x: auto;
-            /* white-space: nowrap; */
+        details:nth-child(4) {
+            background-image:
+            repeating-linear-gradient(
+                -45deg,
+                black 10%,
+                lime 30%
+            );
+        } */
 
-            article {
-                /* items worden niet kleiner in de horizontal scrolling area */
-                flex-shrink: 0;
-                border-radius: 5px;
-                height: 11.5em;
-                max-width: 10em;
-                margin-left: 0.3em;
-                margin-right: 2em;
-                border: 1px solid black;
+        @media screen and (min-width: 600px) {
+            /* smooth transition */
+            details {
+                transition: 0.5s ease;
+            }
+
+            /* maak de section groter */
+            details:hover {
+                transform-origin: center;
+                scale: 1.1;
+                overflow: hidden;
+                transition: 0.5s ease;
+                z-index: 100;
+            }
+
+            /* maak de items in de section kleiner, zodat het in beeld blijft */
+            details:hover section {
+                scale: 0.9;
             }
         }
+    /* } */
+}
+@media screen and (min-width: 600px) {
+    /* alle items donker maken bij een hover*/
+    main:hover details{
+        background-color: #838e96;
+        opacity: 0.5;
+    }
+    /* de huidige hover blijft normaal */
+    main details:hover {
+        background-color: white;
+        opacity: 1;
     }
 }
