@@ -1,0 +1,29 @@
+blur glare
+heel wazig beeld
+
+low contrast
+weinig verschil tussen kleuren die op elkaar lijken
+
+central field loss
+plekken in je visie waar je niet kan zien/ zwarte vlekken.
+
+color color #0779P
+alles heeft een geele tint. weinig verschil tussen groen en blauw.
+
+combined loss
+veel witte gaten in je visie. kleur blijft het zelfde.
+
+
+Gebruik in Chrome de Devtools om de kleuren van jouw project te testen voor kleurenblindheid. Schrijf een issue als je een probleem tegenkomt.
+Open Chrome Devtools > Click 3 dots > Select Rendering > Emulate vision deficiencies
+
+
+https://www.smashingmagazine.com/2023/08/designing-accessible-text-over-images-part1/
+Bekijk de 4 oplossingen die in het artikel worden besproken. Bedenk hoe je het effect met CSS kan bereiken 
+en teken een breakdown schets op het whiteboard met jouw CSS oplossing.
+1 opacity
+2 background-gradient
+3 padding en background color geven aan de tekst
+4 met position de tekst verplaatsen
+5 add blur aan de achtergrond image
+
