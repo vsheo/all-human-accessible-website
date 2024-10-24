@@ -42,11 +42,12 @@ if (mobileQuery.matches) {
 // --------------------------------------------------------------voor alle dagen van de week
 function currentDay() {
     const now = new Date();
-    const day = now.getDay();
-    if (day == 0) {
-        const vandaag = document.getElementById('zon')
-        vandaag.classList.add('today')
-    }
+    var day = now.getDay();
+    day += 1;
+    console.log(day)
+    const highlightDay = document.querySelector('week li:nth-of-type('+ day +')')
+    console.log(highlightDay)
+    // highlightDay.classList.add('highlight')
 }
 currentDay();
 

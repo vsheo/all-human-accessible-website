@@ -166,7 +166,7 @@ main {
                 }
             }
 
-            .today {
+            .highlight {
                 background-color: red;
             }
 
@@ -352,74 +352,5 @@ main {
             }
         }
     }
-    /* main */
-    /* @media screen and (min-width: 600px) {
-        details:nth-child(1) {
-            background-image:
-            linear-gradient(
-                -35deg,
-                #63bbff 50%,
-                #0091ff 50%
-            );
-        }
-
-        details:nth-child(2) {
-            background-image:
-            linear-gradient(
-                -35deg,
-                #0091ff 50%,
-                #fe0170 50%
-            );
-        }
-
-        details:nth-child(3) {
-            background-image:
-            radial-gradient(
-                #c99b51 50%,
-                #db6e08 50%
-            );
-        }
-
-        details:nth-child(4) {
-            background-image:
-            repeating-linear-gradient(
-                -45deg,
-                black 10%,
-                lime 30%
-            );
-        } */
-
-        @media screen and (min-width: 600px) {
-            /* smooth transition */
-            details {
-                transition: 0.5s ease;
-            }
-
-            /* maak de section groter */
-            details:hover {
-                transform-origin: center;
-                scale: 1.1;
-                overflow: hidden;
-                transition: 0.5s ease;
-                z-index: 100;
-            }
-
-            /* maak de items in de section kleiner, zodat het in beeld blijft */
-            details:hover section {
-                scale: 0.9;
-            }
-        }
-    /* } */
 }
-@media screen and (min-width: 600px) {
-    /* alle items donker maken bij een hover*/
-    main:hover details{
-        background-color: #838e96;
-        opacity: 0.5;
-    }
-    /* de huidige hover blijft normaal */
-    main details:hover {
-        background-color: white;
-        opacity: 1;
-    }
-}
+

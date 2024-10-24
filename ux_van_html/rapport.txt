@@ -63,3 +63,6 @@ Headings
 de heading structuur ziet er logisch uit totdat je onderin komt en een tweede h1 ziet
 deze mag er niet zijn, 1 h1 per html file.
 deze staat nu hier omdst ik de code gekopieert en gepaste heb zodat ik een pop up kon testen met tab index.
+
+
+
