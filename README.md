@@ -21,6 +21,7 @@ Op de mobiele versie zijn op de landingspagina meerdere klikbare logo's toegevoe
 
 Bij de desktopversie wordt optimaal gebruik gemaakt van de breedte van het scherm. Hier staan alle radiozenders onder elkaar en het programma is beschikbaar via een horizontale scroller, waarmee de gebruiker gemakkelijk door de shows kan navigeren.
 
+![website qr code](all_human_accessible_website_qr.png)
 ![mobile versie 1.0](image.png)
 ![mobile versie 2.0](image-1.png)
 ![desktop versie 1.0](image-2.png)
