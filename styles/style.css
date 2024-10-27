@@ -20,7 +20,7 @@ a {
 
 /* HEADER */
 header {
-    background-color: #008cff;
+    background-color: #0075d5;
     color: white;
     padding: 10px;
     text-align: center;
@@ -354,3 +354,5 @@ main {
     }
 }
 
+/* centrale plek voor tijdlijn, radiozenders en week */
+/* aria describe by */

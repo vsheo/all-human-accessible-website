@@ -24,12 +24,16 @@ for (let i = 0; i < allDetails.length; i++) {
 // maak detail dicht als een nieuwe open gaat. dit werkt alleen voor mobile schermen.
 const mobileQuery = window.matchMedia('(max-width: 600px)')
 if (mobileQuery.matches) {
+    // zoekt alle details elementen, en slaat het op in een const
     const closeDetail = document.querySelectorAll("details")
 
+    // 1 voor 1 door alle details elementen
     closeDetail.forEach((details) => {
         details.addEventListener("toggle", (e) => {
+            // check als details open is
             if (details.open) {
                 closeDetail.forEach((details) => {
+                    // als een nieuwe open gaat, dan gaat de oude dicht
                     if (details != e.target && details.open) {
                         details.open = false
                     }
